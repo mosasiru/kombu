@@ -835,7 +835,7 @@ class Queue(MaybeChannelBound):
         exchange = Exchange(options.get('exchange'),
                             type=options.get('exchange_type'),
                             delivery_mode=options.get('delivery_mode'),
-                            routing_key=options.get('routing_key'),
+                            routing_key=binding_key,
                             durable=e_durable,
                             auto_delete=e_auto_delete,
                             arguments=e_arguments)
